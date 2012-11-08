@@ -32,6 +32,10 @@
   `make` on-demand each time `index.html` is requested, so you don't even
   have to know about the build
 
+  This is just _one_ example of how you could structure an application. You could
+  for example take a more traditional approach with `./models`, `./controllers`,
+  and `./views` etc.
+
 ## License
 
   MIT
