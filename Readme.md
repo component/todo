@@ -1,7 +1,9 @@
 
 # todo
 
-  Todo list component example
+  Todo list component example app:
+
+  ![](http://f.cl.ly/items/3l0r2s1C0d1Y1d3N202J/todo.png)
 
 ## Installation
 
