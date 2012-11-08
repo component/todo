@@ -1,0 +1,30 @@
+
+.item {
+  margin: 0;
+  padding: 5px 0;
+  list-style: none;
+  border-bottom: 1px dotted #eee;
+}
+
+.item:hover {
+  background: #fbfbfb;
+}
+
+.item .x {
+  color: #acacac;
+  font-size: 10px;
+  text-decoration: none;
+  float: right;
+  border-radius: 3px;
+  margin-right: 2px;
+  padding: 3px 5px;
+}
+
+.item .x:hover {
+  background: #eee;
+}
+
+.item.complete label {
+  text-decoration: line-through;
+  color: #acacac;
+}

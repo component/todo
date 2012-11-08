@@ -1,0 +1,13 @@
+{
+  "name": "item",
+  "description": "Item model",
+  "version": "0.0.1",
+  "dependencies": {
+    "component/model": "*",
+    "component/model-timestamps": "*"
+  },
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}

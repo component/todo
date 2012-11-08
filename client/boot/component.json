@@ -1,0 +1,14 @@
+{
+  "name": "boot",
+  "description": "Main app boot component",
+  "dependencies": {
+    "component/collection": "*",
+    "component/keyname": "*"
+  },
+  "scripts": ["index.js"],
+  "styles": ["style.css"],
+  "local": [
+    "item-view",
+    "item"
+  ]
+}
