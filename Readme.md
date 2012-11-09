@@ -36,6 +36,14 @@
   for example take a more traditional approach with `./models`, `./controllers`,
   and `./views` etc.
 
+## Components used
+
+  - [page.js](https://github.com/visionmedia/page.js) for routing
+  - [model](https://github.com/component/model) for models
+  - [collection](https://github.com/component/collection) for model collections
+  - [keyname](https://github.com/component/keyname) for keycode name strings
+  - [reactive](https://github.com/component/reactive) for reactive templates
+
 ## License
 
   MIT
