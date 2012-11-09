@@ -79,7 +79,7 @@ page('/', function(){
 
 page('/complete', function(){
   Item.all(function(err, items){
-    items.select(function(i){ return i.complete() }).each(function(item){
+    items.select('complete').each(function(item){
       var view = new ItemView(item);
       list.appendChild(view.el);
     });
@@ -92,7 +92,7 @@ page('/complete', function(){
 
 page('/incomplete', function(){
   Item.all(function(err, items){
-    items.reject(function(i){ return i.complete() }).each(function(item){
+    items.reject('complete').each(function(item){
       var view = new ItemView(item);
       list.appendChild(view.el);
     });
