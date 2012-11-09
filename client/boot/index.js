@@ -6,7 +6,8 @@
 var Item = require('item')
   , ItemView = require('item-view')
   , Collection = require('collection')
-  , keyname = require('keyname');
+  , keyname = require('keyname')
+  , page = require('page')
 
 /**
  * Collection of todo Items.
@@ -50,23 +51,52 @@ input.onkeydown = function(e){
   }
 };
 
-// fetch initial items
+/**
+ * Clear list.
+ */
 
-Item.all(function(err, items){
-  items.each(function(item){
-    var view = new ItemView(item);
-    list.appendChild(view.el);
+page('*', function(ctx, next){
+  list.innerHTML = '';
+  next();
+});
+
+/**
+ * All items.
+ */
+
+page('/', function(){
+  Item.all(function(err, items){
+    items.each(function(item){
+      var view = new ItemView(item);
+      list.appendChild(view.el);
+    });
   });
 });
 
-// TODO: refactor ^ once we have 
-// async enumerables:
+/**
+ * Completed items.
+ */
 
-/*
-
-Item.each(function(item){
-  var view = new ItemView(item);
-  list.appendChild(view.el);
+page('/complete', function(){
+  Item.all(function(err, items){
+    items.select(function(i){ return i.complete() }).each(function(item){
+      var view = new ItemView(item);
+      list.appendChild(view.el);
+    });
+  });
 });
 
-*/
+/**
+ * Incomplete items.
+ */
+
+page('/incomplete', function(){
+  Item.all(function(err, items){
+    items.reject(function(i){ return i.complete() }).each(function(item){
+      var view = new ItemView(item);
+      list.appendChild(view.el);
+    });
+  });
+});
+
+page();

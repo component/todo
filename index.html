@@ -5,9 +5,16 @@
     <link rel="stylesheet" href="build.css">
   </head>
   <body>
-    <h1>Todo</h1>
-    <p><input type="text" name="todo" placeholder="What needs to be done?" /></p>
-    <ul id="todos"></ul>
+    <section id="content">
+      <h1>Todo</h1>
+      <p><input type="text" name="todo" placeholder="What needs to be done?" /></p>
+      <div id="links">
+        <a href="/">all</a>
+        <a href="/complete">complete</a>
+        <a href="/incomplete">incomplete</a>
+      </div>
+      <ul id="todos"></ul>
+    </section>
     <script src="build.js"></script>
     <script>
       require('boot')

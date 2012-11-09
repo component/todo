@@ -21,3 +21,27 @@ ul {
   padding: 0;
   width: 400px;
 }
+
+#content {
+  width: 400px;
+  position: relative;
+}
+
+#links {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 12px;
+}
+
+#links a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 3px;
+  color: #0dbdff;
+}
+
+#links a:hover {
+  color: #29cbff;
+  border-bottom: 1px solid #ddd;
+}
