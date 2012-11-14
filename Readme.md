@@ -34,7 +34,9 @@
 
   This is just _one_ example of how you could structure an application. You could
   for example take a more traditional approach with `./models`, `./controllers`,
-  and `./views` etc.
+  and `./views` etc. The entire app could be a single component, with all dependencies
+  specified in the root ./component.json, however I recommend splitting your app
+  into multiple as shown here, regardless of directory structure.
 
 ## Components used
 
