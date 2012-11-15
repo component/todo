@@ -18,9 +18,17 @@
 
     $ node app
 
+## Implementations
+
+  This repository has several branches to display several techniques 
+  that may be applied to structure your application. So far we have
+  the following:
+  
+    - `master` use separate `./client` and `./server` directories
+
 ## Implementation
 
-  All private client-side components are located in `./client`,
+  In this implementation all private client-side components are located in `./client`,
   while server related REST end-points are in `./server`. The `./index.html`
   file bootstraps the client-side, and `app.js` is a small Express server
   to power the backend.
