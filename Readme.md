@@ -24,7 +24,8 @@
   that may be applied to structure your application. So far we have
   the following:
   
-    - `master` use separate `./client` and `./server` directories
+    - `master` uses separate `./client` and `./server` directories
+    - `single` uses a single `./lib` directory to house both server and client components
 
 ## Implementation
 
