@@ -26,6 +26,7 @@
   
     - `master` uses separate `./client` and `./server` directories
     - `single` uses a single `./lib` directory to house both server and client components
+    - `multiple` uses domain-specific directories `./lib/{models,controllers,views}`
 
 ## Implementation
 
