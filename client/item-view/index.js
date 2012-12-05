@@ -22,7 +22,8 @@ module.exports = ItemView;
  */
 
 function ItemView(item) {
-  View.call(this, item, domify(html));
+  var el = domify(html);
+  View.call(this, item, el[0]);
   this.classes = classes(this.el);
   item.on('change complete', this.toggleCompleteClass.bind(this));
   this.bind('click .x', 'remove');
