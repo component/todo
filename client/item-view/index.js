@@ -23,6 +23,7 @@ module.exports = ItemView;
 
 function ItemView(item) {
   var el = domify(html);
+  el[0].children[1].innerText = item.get('title');
   View.call(this, item, el[0]);
   this.classes = classes(this.el);
   item.on('change complete', this.toggleCompleteClass.bind(this));
