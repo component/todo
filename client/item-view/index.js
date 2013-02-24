@@ -26,8 +26,6 @@ function ItemView(item) {
   View.call(this, item, el[0]);
   this.classes = classes(this.el);
   item.on('change complete', this.toggleCompleteClass.bind(this));
-  this.bind('click .x', 'remove');
-  this.bind('change [name=complete]', 'changed');
   this.toggleCompleteClass();
 }
 
@@ -38,10 +36,10 @@ function ItemView(item) {
 ItemView.prototype.__proto__ = View.prototype;
 
 /**
- * Complete state change.
+ * Save completed state change
  */
 
-ItemView.prototype.changed = function(e){
+ItemView.prototype.save = function(e){
   var complete = e.target.checked;
   this.obj.complete(complete);
   this.obj.save();
