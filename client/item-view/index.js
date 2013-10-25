@@ -23,6 +23,8 @@ module.exports = ItemView;
 
 function ItemView(item) {
   var el = domify(html);
+  el[0].children[0].defaultChecked = item.get('complete');
+  el[0].children[1].textContent = item.get('title');
   View.call(this, item, el[0]);
   this.classes = classes(this.el);
   item.on('change complete', this.toggleCompleteClass.bind(this));
