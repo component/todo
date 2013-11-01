@@ -23,7 +23,7 @@ module.exports = ItemView;
 
 function ItemView(item) {
   var el = domify(html);
-  View.call(this, item, el[0]);
+  View.call(this, item, el);
   this.classes = classes(this.el);
   item.on('change complete', this.toggleCompleteClass.bind(this));
   this.toggleCompleteClass();
@@ -51,7 +51,7 @@ ItemView.prototype.save = function(e){
 
 ItemView.prototype.remove = function(){
   this.el.parentNode.removeChild(this.el);
-  this.obj.remove();
+  this.obj.destroy();
 };
 
 /**
