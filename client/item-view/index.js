@@ -50,6 +50,7 @@ ItemView.prototype.save = function(e){
  */
 
 ItemView.prototype.remove = function(){
+  console.log('this', this);
   this.el.parentNode.removeChild(this.el);
   this.obj.destroy();
 };
