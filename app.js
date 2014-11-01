@@ -4,7 +4,6 @@
  */
 
 var express = require('express')
-  , build = require('./server/build')
   , items = require('./server/items')
   , app = express();
 
