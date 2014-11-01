@@ -1,9 +1,11 @@
 {
   "name": "todo",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "dependencies": {
-    "express": "3.0.1"
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "morgan": "^1.4.1"
   },
   "repository": {
     "type": "git",

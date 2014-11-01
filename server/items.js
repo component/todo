@@ -44,7 +44,7 @@ exports.remove = function(req, res){
   var id = req.params.id;
   var i = indexOf(id);
   items.splice(i, 1);
-  res.send(200);
+  res.sendStatus(200);
 };
 
 /**
@@ -59,5 +59,5 @@ exports.update = function(req, res){
   if (!item) return res.send(404, 'item does not exist');
   item.title = body.title;
   item.complete = body.complete;
-  res.send(200);
+  res.sendStatus(200);
 };
