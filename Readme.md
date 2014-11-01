@@ -14,20 +14,6 @@
     $ npm install
     $ make
 
-## Running the app
-
-    $ node app
-
-## Implementations
-
-  This repository has several branches to display several techniques 
-  that may be applied to structure your application. So far we have
-  the following:
-  
-    - `master` uses separate `./client` and `./server` directories
-    - `single` uses a single `./lib` directory to house both server and client components
-    - `multiple` uses domain-specific directories `./lib/{models,controllers,views}`
-
 ## Implementation
 
   In this implementation all private client-side components are located in `./client`,
@@ -37,10 +23,7 @@
 
   Each client-side component in `./client` defines its own dependencies,
   both "local" (in the `./client` dir), and remote from public components
-  that devs have created. On `make` these are installed and the builder
-  outputs `./build`. The tiny 1-line middleware in `./server/build` executes
-  `make` on-demand each time `index.html` is requested, so you don't even
-  have to know about the build
+  that devs have created.
 
   This is just _one_ example of how you could structure an application. You could
   for example take a more traditional approach with `./models`, `./controllers`,
