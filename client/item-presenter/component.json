@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "component/classes": "*",
+    "component/reactive": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "style.css"
+  ],
+  "templates": [
+    "template.html"
+  ]
+}

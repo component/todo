@@ -1,7 +1,7 @@
 {
   "name": "todo",
   "description": "TodoMVC component example",
-  "version": "0.0.1",
-  "local": ["boot"],
+  "version": "1.0.0",
+  "locals": ["boot"],
   "paths": ["client"]
 }

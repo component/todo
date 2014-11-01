@@ -1,1 +1,0 @@
-module.exports = '<li class="item">\n  <input type="checkbox" name="complete" on-change="save" data-checked="complete" />\n  <label class="title" data-text="title"></label>\n  <a href="#" class="x" on-click="remove">✕</a>\n</li>\n';

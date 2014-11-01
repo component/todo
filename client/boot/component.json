@@ -1,6 +1,4 @@
 {
-  "name": "boot",
-  "description": "Main app boot component",
   "dependencies": {
     "visionmedia/page.js": "*",
     "component/collection": "*",
@@ -8,8 +6,8 @@
   },
   "scripts": ["index.js"],
   "styles": ["style.css"],
-  "local": [
-    "item-view",
-    "item"
+  "locals": [
+    "item",
+    "item-presenter"
   ]
 }

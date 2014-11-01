@@ -4,10 +4,10 @@
  */
 
 var Item = require('item')
-  , ItemView = require('item-view')
+  , ItemPresenter = require('item-presenter')
   , Collection = require('collection')
   , keyname = require('keyname')
-  , page = require('page')
+  , page = require('page');
 
 /**
  * Collection of todo Items.
@@ -44,9 +44,9 @@ input.onkeydown = function(e){
       items.push(item);
       item.save();
 
-      // view
-      var view = new ItemView(item);
-      list.appendChild(view.el);
+      // presenter
+      var presenter = new ItemPresenter(item);
+      list.appendChild(presenter.view.el);
       break;
   }
 };
@@ -67,8 +67,8 @@ page('*', function(ctx, next){
 page('/', function(){
   Item.all(function(err, items){
     items.each(function(item){
-      var view = new ItemView(item);
-      list.appendChild(view.el);
+      var presenter = new ItemPresenter(item);
+      list.appendChild(presenter.view.el);
     });
   });
 });
@@ -80,8 +80,8 @@ page('/', function(){
 page('/complete', function(){
   Item.all(function(err, items){
     items.select('complete()').each(function(item){
-      var view = new ItemView(item);
-      list.appendChild(view.el);
+      var presenter = new ItemPresenter(item);
+      list.appendChild(presenter.view.el);
     });
   });
 });
@@ -93,8 +93,8 @@ page('/complete', function(){
 page('/incomplete', function(){
   Item.all(function(err, items){
     items.reject('complete()').each(function(item){
-      var view = new ItemView(item);
-      list.appendChild(view.el);
+      var presenter = new ItemPresenter(item);
+      list.appendChild(presenter.view.el);
     });
   });
 });
