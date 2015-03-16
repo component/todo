@@ -4,15 +4,15 @@
   "version": "1.0.0",
   "dependencies": {
     "body-parser": "^1.9.2",
+    "builder-coffee-script": "^0.2.0",
     "coffee-script": "^1.9.1",
-    "component": "^1.1.0",
+    "component-builder": "^1.2.1",
     "express": "^4.10.1",
+    "mkdirp": "^0.5.0",
     "morgan": "^1.4.1"
   },
   "scripts": {
-    "server": "coffee app.coffee",
-    "component-install": "component-install",
-    "component-build": "component-build"
+    "server": "coffee app.coffee"
   },
   "repository": {
     "type": "git",

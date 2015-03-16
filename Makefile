@@ -1,9 +1,12 @@
+NODE_BIN := $(shell npm bin)
+COFFEE := $(NODE_BIN)/coffee --nodejs --harmony
+
 build: components $(SRC) $(TEMPLATES)
-	npm run component-build
+	$(COFFEE) component-builder.coffee
 	npm run server
 
 components:
-	npm run component-install
+	$(COFFEE) component-builder.coffee
 
 clean:
 	rm -fr build components $(TEMPLATES)
