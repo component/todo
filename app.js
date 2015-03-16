@@ -24,7 +24,7 @@ app.delete('/items/:id', items.remove);
 
 // catch-all
 
-app.get('/', function(req, res){
+app.get('/*', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
