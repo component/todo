@@ -1,9 +1,9 @@
 build: components $(SRC) $(TEMPLATES)
-	component build
+	npm run component-build
 	node app
 
 components:
-	component install
+	npm run component-install
 
 clean:
 	rm -fr build components $(TEMPLATES)
