@@ -1,6 +1,6 @@
 build: components $(SRC) $(TEMPLATES)
 	npm run component-build
-	node app
+	npm run server
 
 components:
 	npm run component-install
