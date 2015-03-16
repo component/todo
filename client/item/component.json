@@ -5,6 +5,6 @@
     "component/model-timestamps": "*"
   },
   "scripts": [
-    "index.js"
+    "index.coffee"
   ]
 }
