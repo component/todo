@@ -1,14 +1,19 @@
 NODE_BIN := $(shell npm bin)
 COFFEE := $(NODE_BIN)/coffee --nodejs --harmony
+CLIENT_SCRIPTS := $(shell find client/ -type f)
 
-build: components $(SRC) $(TEMPLATES)
+# build output for the client
+build: components $(CLIENT_SCRIPTS)
 	$(COFFEE) component-builder.coffee
-	npm run server
 
+# install remote components
 components:
 	$(COFFEE) component-builder.coffee
 
-clean:
-	rm -fr build components $(TEMPLATES)
+server:
+	npm run server
 
-.PHONY: clean
+clean:
+	rm -fr build components
+
+.PHONY: clean server
