@@ -5,16 +5,16 @@
 
 ## Installation
 
- Of course have `component(1)` installed:
- 
-    $ npm install -g component
-
- Install express for the server, and the component dependencies:
-
+    $ git clone https://github.com/component/todo.git
+    $ cd todo
     $ npm install
     $ make
+    $ make server
 
 ## Implementation
+
+  __NOTE:__ This is a fork of the original component/todo, refactored to differnet stack:
+  coffee-script, jade, stylus, component API
 
   In this implementation all private client-side components are located in `./client`,
   while server related REST end-points are in `./server`. The `./index.html`
