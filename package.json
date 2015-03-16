@@ -12,7 +12,7 @@
     "morgan": "^1.4.1"
   },
   "scripts": {
-    "server": "coffee app.coffee"
+    "server": "coffee server/index.coffee"
   },
   "repository": {
     "type": "git",
