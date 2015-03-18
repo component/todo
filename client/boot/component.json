@@ -5,7 +5,7 @@
     "component/keyname": "*"
   },
   "scripts": ["index.coffee"],
-  "styles": ["style.css"],
+  "styles": ["style.styl"],
   "locals": [
     "item",
     "item-presenter"
