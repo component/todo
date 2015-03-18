@@ -2,6 +2,7 @@ fs = require('fs')
 resolve = require('component-resolver')
 build = require('component-builder')
 coffee = require('builder-coffee-script')
+stylus = require('builder-stylus')
 mkdirp = require('mkdirp')
 
 OUTPUT = 'build'
@@ -25,7 +26,7 @@ resolve process.cwd(), { install: true, out: REMOTES}, (err, tree) ->
 
     # only include `.css` files from components' `.styles` field
     build.styles(tree)
-        .use('styles', build.plugins.css())
+        .use('styles', build.plugins.css(), stylus())
         .end (err, string) ->
             if err
                 throw err

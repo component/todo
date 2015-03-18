@@ -7,7 +7,7 @@
     "index.coffee"
   ],
   "styles": [
-    "style.css"
+    "style.styl"
   ],
   "templates": [
     "template.html"
